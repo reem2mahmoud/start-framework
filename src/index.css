@@ -1,13 +1,140 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap'); */
+
+:root {
+    --main-color: #2C3E50;
+    --primary-color: #1abc9c;
+    --footer-color: #1A252F
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: "system-ui"
+}
+
+.divider .line_divider {
+    width: 5rem;
+    height: 0.3rem;
+    background-color: white
+}
+
+/* ********************NAVBAR******************** */
+nav {
+    background-color: var(--main-color);
+}
+
+.active {
+    background-color: #1abc9c;
+    border-radius: 7px
+}
+
+footer .footer_about {
+    background-color: var(--main-color);
+}
+
+
+footer .footer_about ul li {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+    line-height: 2.4rem;
+}
+
+footer .footer_about ul li a i {
+    color: white;
+}
+
+footer .footer_copyRights {
+    background-color: var(--footer-color)
+}
+
+/* ********************HOME/ABOUT******************** */
+
+.home_page,
+.about_page {
+    background-color: var(--primary-color);
+}
+
+.main_part {
+    margin-top: 92px;
+    min-height: calc(100vh - 112px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ********************PORTFOLIO******************** */
+.black_header h2,
+.black_header.divider .fa-star {
+    color: var(--main-color) !important
+}
+
+.black_header .line_divider {
+    background-color: var(--main-color) !important
+}
+
+.portfolio_page .img_container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio_page .content_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s
+}
+
+.portfolio_page .portfolio_block:hover .content_overlay {
+    opacity: 0.9
+}
+
+.portfolio_page .content_overlay i {
+    font-size: 6rem;
+}
+
+.imgPreview {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(98, 168, 229, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.imgPreview img {
+    width: 47%
+}
+
+/* ********************CONTACTS******************** */
+
+
+.contacts_page .form-control:focus {
+    outline: 0 !important;
+    box-shadow: none;
+}
+
+.form-floating>.form-control:focus~label {
+    color: var(--primary-color) !important;
+
+}
+
+.contacts_page .send_btn {
+    background-color: var(--primary-color);
+    color: white
 }
